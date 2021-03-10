@@ -1,0 +1,11 @@
+===========
+
+let predicate = NSPredicate.init(format: "title contains[c] %@", searchBar.text!)
+self.arrTeamSearching = (self.arrTeam.filtered(using: predicate) as! NSArray).mutableCopy() as! NSMutableArray
+
+===========
+
+self.arrPlaylistFilter.removeAll(keepingCapacity: false)
+self.arrPlaylistFilter = appDelegate.arrPlaylistsData.filter{ $0.attributes.name.range(of: strSearch, options: [.caseInsensitive]) != nil}
+
+===========
