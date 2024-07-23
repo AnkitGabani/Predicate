@@ -8,4 +8,6 @@ self.arrTeamSearching = (self.arrTeam.filtered(using: predicate) as! NSArray).mu
 self.arrPlaylistFilter.removeAll(keepingCapacity: false)
 self.arrPlaylistFilter = appDelegate.arrPlaylistsData.filter{ $0.attributes.name.range(of: strSearch, options: [.caseInsensitive]) != nil}
 
+self.arrList =  arrList.sorted(by: { $0.lastMessageAgo < $1.lastMessageAgo})
+
 ===========
